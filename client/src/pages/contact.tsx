@@ -1,15 +1,15 @@
 import { Flex } from "@chakra-ui/react";
 import { NavBar } from "../components/NavBar";
 
-const Index = () => {
+const Contact = () => {
   return (
     <>
       <NavBar />
       <Flex>
-        <div>Lorem ipsum</div>
+        <div>Contact</div>
       </Flex>
     </>
   );
 };
 
-export default Index;
+export default Contact;
