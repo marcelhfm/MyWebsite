@@ -28,14 +28,14 @@ export const IndexPane: React.FC<IndexPaneProps> = ({}) => {
       <Heading fontSize="3xl">Hey I'm Marcel!</Heading>
       <Flex>
         <WrapItem mt="8" mr="4">
-          <Avatar src="/ProfilePic.jpg" size="2xl" name="Marcel Hofmann" />
+          <Avatar src="/Placeholder.jpg" size="2xl" name="Marcel Hofmann" />
         </WrapItem>
         <Text fontSize="xl" mt={4}>
           I'm a Student and Hobbydeveloper living in Munich. I am currently
           full-time studying business informatics at the Hochschule für
           angewandte Wissenschaften München.
           <br />
-          In my spare time I'm tryinig to improve my programming skills, with
+          In my spare time I'm trying to improve my programming skills, with
           smaller projects such as this website.
         </Text>
       </Flex>

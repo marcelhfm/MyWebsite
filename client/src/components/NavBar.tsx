@@ -1,5 +1,6 @@
 import {
   Box,
+  Button,
   Container,
   Flex,
   Heading,
@@ -14,7 +15,7 @@ import {
 } from "@chakra-ui/react";
 import React from "react";
 import NextLink from "next/link";
-import { HamburgerIcon } from "@chakra-ui/icons";
+import { ChevronDownIcon, HamburgerIcon } from "@chakra-ui/icons";
 import Logo from "./Logo";
 import ThemeToggle from "./ThemToggle";
 
@@ -58,7 +59,7 @@ const NavBar = (props) => {
 
   return (
     <Box
-      position="sticky"
+      position="fixed"
       as="nav"
       w="100%"
       bg={useColorModeValue("#ffffff40", "#20202380")}
@@ -88,47 +89,28 @@ const NavBar = (props) => {
           flexGrow={1}
           mt={{ base: 4, md: 0 }}
         >
+          <Menu>
+            <MenuButton
+              as={Button}
+              rightIcon={<ChevronDownIcon />}
+              variant="ghost"
+            >
+              Projects
+            </MenuButton>
+            <MenuList>
+              <NextLink href="/projects">
+                <MenuItem>All Projects</MenuItem>
+              </NextLink>
+              <MenuItem>Coming soon...</MenuItem>
+            </MenuList>
+          </Menu>
+
           <LinkItem href="/contact" path={path}>
             Contact
           </LinkItem>
           <LinkItem href="/about" path={path}>
             About
           </LinkItem>
-          {/* <Menu>
-            {" "}
-            <MenuButton
-              p={2}
-              bg={active ? "grassTeal" : undefined}
-              color={active ? "#202023" : inactiveColor}
-              variant="ghost"
-              as={Button}
-              rightIcon={<ChevronDownIcon />}
-            >
-              Projects
-            </MenuButton>
-            <MenuList>
-              <MenuItem onClick={() => router.push("/projects")}>
-                All projects
-              </MenuItem>
-              <MenuItem>Project 1</MenuItem>
-              <MenuItem>Project 2</MenuItem>
-              <MenuItem>Project 3</MenuItem>
-              <MenuItem>Project 4</MenuItem>
-            </MenuList>
-          </Menu>
-
-          <ButtonGroup variant="ghost" spacing="4">
-            <Button onClick={() => router.push("/about")}>
-              About this Website
-            </Button>
-            <Button onClick={() => router.push("/contact")}>Contact Me</Button>
-          </ButtonGroup>
-          <Spacer />
-          <Box>
-            <Button ml="auto" onClick={toggleColorMode}>
-              Toggle {colorMode === "light" ? "Dark" : "Light"}
-            </Button>
-          </Box> */}
         </Stack>
 
         <Box flex={1} align="right">
