@@ -1,10 +1,9 @@
 import { Flex } from "@chakra-ui/react";
-import { NavBar } from "../components/NavBar";
+import NavBar from "../components/NavBar";
 
 const Contact = () => {
   return (
     <>
-      <NavBar />
       <Flex>
         <div>Contact</div>
       </Flex>
