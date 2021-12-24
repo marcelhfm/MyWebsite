@@ -1,6 +1,7 @@
 import { Box, Container } from "@chakra-ui/react";
 import { NextRouter } from "next/router";
 import React from "react";
+import { Footer } from "./Footer";
 import NavBar from "./NavBar";
 
 interface LayoutProps {
@@ -16,6 +17,7 @@ export const Layout: React.FC<LayoutProps> = ({ children, router }) => {
       <Container maxW="container.md" pt={14}>
         {children}
       </Container>
+      <Footer />
     </Box>
   );
 };
