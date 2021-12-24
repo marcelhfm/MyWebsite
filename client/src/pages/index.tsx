@@ -1,18 +1,30 @@
-import { Box, Flex } from "@chakra-ui/react";
-import { IndexPane } from "../components/IndexPane";
+import { Avatar, Box, Flex, WrapItem, Text, Heading } from "@chakra-ui/react";
+import { CvTable } from "../components/CvTable";
 import { Pane } from "../components/Pane";
 
 const Index = () => {
   return (
     <>
       <Box mt={8}>
-        <IndexPane />
-        <Pane
-          title="Test"
-          desc="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet,"
-          titleSize="2xl"
-        />
+        <Pane title="Hey, I'm Marcel!">
+          <Flex>
+            <WrapItem mt="8" mr="4">
+              <Avatar src="/Placeholder.jpg" size="2xl" name="Marcel Hofmann" />
+            </WrapItem>
+            <Text fontSize="xl" mt={4}>
+              I'm a Student and Hobbydeveloper living in Munich. I am currently
+              full-time studying business informatics at the Hochschule für
+              angewandte Wissenschaften München.
+              <br />
+              In my spare time I'm trying to improve my programming skills, with
+              smaller projects such as this website.
+            </Text>
+          </Flex>
+        </Pane>
+        <Pane title="curriculum vitae">
+          <Heading fontSize="xl">Education</Heading>
+          <CvTable />
+        </Pane>
       </Box>
     </>
   );

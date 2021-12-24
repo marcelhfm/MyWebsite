@@ -1,14 +1,26 @@
-import { Box, Flex, Heading, Text, useColorModeValue } from "@chakra-ui/react";
+import {
+  Box,
+  Container,
+  Flex,
+  Heading,
+  Text,
+  useColorModeValue,
+} from "@chakra-ui/react";
 import React from "react";
 
 interface PaneProps {
   title: string;
-  desc: string;
+  desc?: string;
   titleSize?: string;
 }
 
-export const Pane: React.FC<PaneProps> = ({ title, desc, titleSize }) => {
-  const boxColor = useColorModeValue("blue.50", "gray.700");
+export const Pane: React.FC<PaneProps> = ({
+  title,
+  desc,
+  titleSize,
+  children,
+}) => {
+  const boxColor = useColorModeValue("white", "gray.700");
   return (
     <Box
       bg={boxColor}
@@ -22,9 +34,15 @@ export const Pane: React.FC<PaneProps> = ({ title, desc, titleSize }) => {
       borderRadius="md"
     >
       <Heading fontSize={titleSize ? titleSize : "3xl"}>{title}</Heading>
-      <Text fontSize="xl" mt={4}>
-        {desc}
-      </Text>
+      {desc ? (
+        <Text fontSize="xl" mt={4}>
+          {desc}
+        </Text>
+      ) : (
+        <Container maxW="container.md" pt={4}>
+          {children}
+        </Container>
+      )}
     </Box>
   );
 };
