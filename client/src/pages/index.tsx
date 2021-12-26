@@ -1,10 +1,16 @@
 import { Avatar, Box, Flex, WrapItem, Text, Heading } from "@chakra-ui/react";
 import { CvTable } from "../components/CvTable";
 import { Pane } from "../components/Pane";
+import Head from "next/head";
 
 const Index = () => {
   return (
     <>
+      <div>
+        <Head>
+          <title>Home | Marcel Hofmann</title>
+        </Head>
+      </div>
       <Box mt={8}>
         <Pane title="Hey, I'm Marcel!">
           <Flex>

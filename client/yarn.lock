@@ -63,7 +63,7 @@
   dependencies:
     regenerator-runtime "^0.13.4"
 
-"@babel/runtime@^7.0.0", "@babel/runtime@^7.12.13", "@babel/runtime@^7.13.10", "@babel/runtime@^7.7.2":
+"@babel/runtime@^7.0.0", "@babel/runtime@^7.12.13", "@babel/runtime@^7.13.10", "@babel/runtime@^7.16.5", "@babel/runtime@^7.7.2":
   version "7.16.5"
   resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.16.5.tgz#7f3e34bf8bdbbadf03fbb7b1ea0d929569c9487a"
   integrity sha512-TXWihFIS3Pyv5hzR7j6ihmeLkZfrXGxAr5UfSl8CHf+6q/wpiYDkUau0czckpYG8QmnCIuPpdLtuA9VmuGGyMA==
@@ -935,6 +935,15 @@
     prop-types "^15.7.2"
     tslib "^2.1.0"
 
+"@tanem/svg-injector@^10.1.13":
+  version "10.1.14"
+  resolved "https://registry.yarnpkg.com/@tanem/svg-injector/-/svg-injector-10.1.14.tgz#e42f5defb524551770c1a583f950d4bc89e6fd73"
+  integrity sha512-VjcuoKb2jCyx7FeOoz+p3LfH+V2HYXpPPVbTqWdHNV4R8d6DtHYNfQWPivSVcNi0cAtkLnDuEE+2c714YA2l5A==
+  dependencies:
+    "@babel/runtime" "^7.16.5"
+    content-type "^1.0.4"
+    tslib "^2.3.1"
+
 "@types/lodash.mergewith@4.6.6":
   version "4.6.6"
   resolved "https://registry.yarnpkg.com/@types/lodash.mergewith/-/lodash.mergewith-4.6.6.tgz#c4698f5b214a433ff35cb2c75ee6ec7f99d79f10"
@@ -962,7 +971,7 @@
   resolved "https://registry.yarnpkg.com/@types/parse-json/-/parse-json-4.0.0.tgz#2f8bb441434d163b35fb8ffdccd7138927ffb8c0"
   integrity sha512-//oorEZjL6sbPcKUaCdIGlIUeH26mgzimjBB77G6XRgnDl/L5wOnpyBGRe/Mmf5CVW3PwEBE1NjiMZ/ssFh4wA==
 
-"@types/prop-types@*":
+"@types/prop-types@*", "@types/prop-types@^15.7.4":
   version "15.7.4"
   resolved "https://registry.yarnpkg.com/@types/prop-types/-/prop-types-15.7.4.tgz#fcf7205c25dff795ee79af1e30da2c9790808f11"
   integrity sha512-rZ5drC/jWjrArrS8BR6SIr4cWpW09RNTYt9AMZo3Jwwif+iacXAqgVjm0B0Bv/S1jhDXKHqRVNCbACkJ89RAnQ==
@@ -997,6 +1006,11 @@
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/@types/warning/-/warning-3.0.0.tgz#0d2501268ad8f9962b740d387c4654f5f8e23e52"
   integrity sha1-DSUBJorY+ZYrdA04fEZU9fjiPlI=
+
+abs-svg-path@^0.1.1:
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/abs-svg-path/-/abs-svg-path-0.1.1.tgz#df601c8e8d2ba10d4a76d625e236a9a39c2723bf"
+  integrity sha1-32Acjo0roQ1KdtYl4japo5wnI78=
 
 acorn@8.5.0:
   version "8.5.0"
@@ -1314,6 +1328,11 @@ constants-browserify@1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/constants-browserify/-/constants-browserify-1.0.0.tgz#c20b96d8c617748aaf1c16021760cd27fcb8cb75"
   integrity sha1-wguW2MYXdIqvHBYCF2DNJ/y4y3U=
+
+content-type@^1.0.4:
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/content-type/-/content-type-1.0.4.tgz#e138cc75e040c727b1966fe5e5f8c9aee256fe3b"
+  integrity sha512-hIP3EEPs8tB9AT1L+NUqtwOAps4mk2Zob89MWXMHjHWg9milF/j4osnnQLXBCBFBk/tvIG/tUc9mOUJiPBhPXA==
 
 convert-source-map@1.7.0:
   version "1.7.0"
@@ -1970,6 +1989,11 @@ is-string@^1.0.5, is-string@^1.0.7:
   dependencies:
     has-tostringtag "^1.0.0"
 
+is-svg-path@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/is-svg-path/-/is-svg-path-1.0.2.tgz#77ab590c12b3d20348e5c7a13d0040c87784dda0"
+  integrity sha1-d6tZDBKz0gNI5cehPQBAyHeE3aA=
+
 is-symbol@^1.0.2, is-symbol@^1.0.3:
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/is-symbol/-/is-symbol-1.0.4.tgz#a6dac93b635b063ca6872236de88910a57af139c"
@@ -2299,6 +2323,11 @@ parse-json@^5.0.0:
     json-parse-even-better-errors "^2.3.0"
     lines-and-columns "^1.1.6"
 
+parse-svg-path@^0.1.2:
+  version "0.1.2"
+  resolved "https://registry.yarnpkg.com/parse-svg-path/-/parse-svg-path-0.1.2.tgz#7a7ec0d1eb06fa5325c7d3e009b859a09b5d49eb"
+  integrity sha1-en7A0esG+lMlx9PgCbhZoJtdSes=
+
 path-browserify@1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/path-browserify/-/path-browserify-1.0.1.tgz#d98454a9c3753d5790860f16f68867b9e46be1fd"
@@ -2515,6 +2544,16 @@ react-style-singleton@^2.1.0:
     invariant "^2.2.4"
     tslib "^1.0.0"
 
+react-svg@^14.0.6:
+  version "14.1.6"
+  resolved "https://registry.yarnpkg.com/react-svg/-/react-svg-14.1.6.tgz#80b58b423a7d050814c0af6c5deda7286c1c2dd2"
+  integrity sha512-OJGGwuq+ocl6k8QbkWZ2XRF+RO6DbIG2v6as1Xd+oPI0U/4fWInBvtGeCKh3CYcfLIQWI3icyp4atV3BE7bcBg==
+  dependencies:
+    "@babel/runtime" "^7.16.5"
+    "@tanem/svg-injector" "^10.1.13"
+    "@types/prop-types" "^15.7.4"
+    prop-types "^15.7.2"
+
 react@^17.0.2:
   version "17.0.2"
   resolved "https://registry.yarnpkg.com/react/-/react-17.0.2.tgz#d0b5cc516d29eb3eee383f75b62864cfb6800037"
@@ -2629,6 +2668,16 @@ side-channel@^1.0.4:
     call-bind "^1.0.0"
     get-intrinsic "^1.0.2"
     object-inspect "^1.9.0"
+
+social-media-icons-react@^1.1.10:
+  version "1.1.10"
+  resolved "https://registry.yarnpkg.com/social-media-icons-react/-/social-media-icons-react-1.1.10.tgz#216cac72571bfe5ae2ca0e22347883d2c4610781"
+  integrity sha512-KaUyIIDZCKDL+gSIgc19wnPgsw6a49nbswKmUzvazPT9eA7JHWi1i8ddd7w+diFs87wMzr4yMahN3lZow9y/ng==
+  dependencies:
+    abs-svg-path "^0.1.1"
+    is-svg-path "^1.0.2"
+    parse-svg-path "^0.1.2"
+    react-svg "^14.0.6"
 
 source-map@0.7.3:
   version "0.7.3"
@@ -2833,7 +2882,7 @@ tslib@^1.0.0, tslib@^1.9.3:
   resolved "https://registry.yarnpkg.com/tslib/-/tslib-1.14.1.tgz#cf2d38bdc34a134bcaf1091c41f6619e2f672d00"
   integrity sha512-Xni35NKzjgMrwevysHTCArtLDpPvye8zV/0E4EyYn43P7/7qvQwPh9BGkHewbMulVntbigmcT7rdX3BNo9wRJg==
 
-tslib@^2.0.3, tslib@^2.1.0:
+tslib@^2.0.3, tslib@^2.1.0, tslib@^2.3.1:
   version "2.3.1"
   resolved "https://registry.yarnpkg.com/tslib/-/tslib-2.3.1.tgz#e8a335add5ceae51aa261d32a490158ef042ef01"
   integrity sha512-77EbyPPpMz+FRFRuAFlWMtmgUWGe9UOG2Z25NqCwiIjRhOf5iKGuzSe5P2w1laq+FkRy4p+PCuVkJSGkzTEKVw==

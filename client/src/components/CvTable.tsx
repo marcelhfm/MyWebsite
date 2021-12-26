@@ -19,14 +19,6 @@ export const CvTable: React.FC<CvTableProps> = ({}) => {
         <Tbody>
           <Tr>
             <Td isNumeric fontStyle={"italic"}>
-              Period <br /> Elemantary School
-            </Td>
-            <Td>
-              09/2008 - 07/2012 <br /> Klosterschule Dachau
-            </Td>
-          </Tr>
-          <Tr>
-            <Td isNumeric fontStyle={"italic"}>
               Period <br /> Highschool <br />
               Final Grade
             </Td>
@@ -64,16 +56,6 @@ export const CvTable: React.FC<CvTableProps> = ({}) => {
               03/07/2017 - 07/07/2017 <br /> Internship <br />
               Fraunhofer-Institut für Angewandte und Integrierte Sicherheit
               AISEC
-            </Td>
-          </Tr>
-          <Tr>
-            <Td isNumeric fontStyle={"italic"}>
-              Period <br /> Position <br /> Company
-            </Td>
-            <Td>
-              10/2012 - 05/2019 <br />
-              Temporary employee as newspaper and brochure deliverer <br />
-              Zeitung + Prospekt Verteilservice GmbH
             </Td>
           </Tr>
           <Tr>
