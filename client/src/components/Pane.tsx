@@ -9,9 +9,14 @@ import {
 import React from "react";
 
 interface PaneProps {
-  title: string;
+  title?: any;
   desc?: string;
   titleSize?: string;
+  padding?: string;
+  margin?: string;
+  descSize?: string;
+  bg?: { light: string; dark: string };
+  pb?: string;
 }
 
 export const Pane: React.FC<PaneProps> = ({
@@ -19,23 +24,34 @@ export const Pane: React.FC<PaneProps> = ({
   desc,
   titleSize,
   children,
+  padding,
+  margin,
+  descSize,
+  bg,
+  pb,
 }) => {
-  const boxColor = useColorModeValue("white", "gray.700");
+  let boxColor = undefined;
+  if (bg) {
+    boxColor = useColorModeValue(bg.light, bg.dark);
+  } else {
+    boxColor = useColorModeValue("white", "gray.700");
+  }
   return (
     <Box
       bg={boxColor}
-      m={"auto"}
+      m={margin ? margin : "auto"}
       mt="8"
       maxW="800"
-      p={5}
+      p={padding ? padding : "5"}
       shadow="md"
       borderWidth="1px"
       flex="1"
-      borderRadius="md"
+      borderRadius="xl"
+      pb={pb ? pb : ""}
     >
       <Heading fontSize={titleSize ? titleSize : "3xl"}>{title}</Heading>
       {desc ? (
-        <Text fontSize="xl" mt={4}>
+        <Text fontSize={descSize ? descSize : "xl"} mt={4}>
           {desc}
         </Text>
       ) : (
