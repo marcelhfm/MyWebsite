@@ -3,6 +3,7 @@ import { AppProps } from "next/app";
 
 import "../styles/index.css";
 import { Navbar } from "../components/Navbar";
+import { Footer } from "../components/Footer";
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
@@ -11,7 +12,9 @@ function MyApp({ Component, pageProps }: AppProps) {
       <main>
         <Component {...pageProps} />
       </main>
-      <footer></footer>
+      <footer>
+        <Footer />
+      </footer>
     </body>
   );
 }

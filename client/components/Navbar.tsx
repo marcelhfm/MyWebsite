@@ -20,7 +20,7 @@ export const Navbar: React.FC<NavbarProps> = ({}) => {
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       className={`h-10 w-10 mr-3 duration-300 ${
-                        isActive ? "text-violet-300" : "text-white"
+                        isActive ? "text-orange-300" : "text-white"
                       } `}
                       fill="none"
                       viewBox="0 0 24 24"
@@ -34,8 +34,8 @@ export const Navbar: React.FC<NavbarProps> = ({}) => {
                       />
                     </svg>
                     <span
-                      className={`font-bold text-2xl text-violet-300 pr-1 duration-300 ${
-                        isActive ? "text-violet-300" : "text-white"
+                      className={`font-bold text-2xl pr-1 duration-300 ${
+                        isActive ? "text-orange-300" : "text-white"
                       }`}
                     >
                       Marcel Hofmann
@@ -57,7 +57,7 @@ export const Navbar: React.FC<NavbarProps> = ({}) => {
                 {({ isActive }) => (
                   <div
                     className={`rounded-xl hover:bg-gray-600 px-1 py-1 duration-300 ${
-                      isActive ? "text-violet-300" : "text-white"
+                      isActive ? "text-orange-300" : "text-white"
                     }`}
                   >
                     Contact
@@ -72,7 +72,7 @@ export const Navbar: React.FC<NavbarProps> = ({}) => {
                 {({ isActive }) => (
                   <div
                     className={`rounded-xl hover:bg-gray-600 px-1 py-1 duration-300 ${
-                      isActive ? "text-violet-300" : "text-white"
+                      isActive ? "text-orange-300" : "text-white"
                     }`}
                   >
                     About

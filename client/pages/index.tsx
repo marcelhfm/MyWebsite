@@ -4,15 +4,17 @@ import { Pane } from "../components/Pane";
 const IndexPage = () => (
   <div>
     <Head>
-      <title>Index</title>
+      <title>Home | Marcel Hofmann</title>
     </Head>
     <div>
       <Pane>
         <div className="p-4 grid gap-4 md:grid-cols-4">
-          <h1 className="text-4xl font-bold md:col-span-4">Hi I'm Marcel!</h1>
+          <h1 className="text-4xl text-orange-300 font-bold md:col-span-4">
+            Hi I'm Marcel!
+          </h1>
           <img
-            src="../Public/placeholder.jpg"
-            className="object-center md:col-span-1"
+            src="/placeholder.jpg"
+            className="md:col-span-1 md:self-center"
           ></img>
           <p className="text-lg md:col-span-3">
             I'm a Student and Hobbydeveloper living in Munich. I am currently
@@ -27,8 +29,10 @@ const IndexPage = () => (
     <div>
       <Pane>
         <div className="w-full">
-          <h1 className="text-3xl font-bold p-3">curriculum vitae</h1>
-          <h3 className="text-xl font-bold px-3">Education</h3>
+          <h1 className="text-orange-300 text-3xl font-bold p-3">
+            curriculum vitae
+          </h1>
+          <h3 className="text-orange-200 text-xl font-bold px-3">Education</h3>
           <div className="p-3 w-full grid gap-x-10 grid-cols-4">
             <p className="col-span-1 text-right">
               <em>Period</em>
@@ -58,7 +62,9 @@ const IndexPage = () => (
             </p>
             <p className="col-span-3">Business informatics</p>
           </div>
-          <h3 className="text-xl font-bold px-3">Work Experience</h3>
+          <h3 className="text-orange-200 text-xl font-bold px-3">
+            Work Experience
+          </h3>
           <div className="p-3 w-full grid gap-x-10 grid-cols-4">
             <p className="col-span-1 text-right">
               <em>Period</em>
