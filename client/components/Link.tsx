@@ -4,10 +4,10 @@ import { useRouter } from "next/router";
 
 interface LinkProps {
   href: any;
-  children: any;
-  activeClassName: string;
-  inactiveClassName: string;
-  className: string;
+  children?: any;
+  activeClassName?: string;
+  inactiveClassName?: string;
+  className?: string;
 }
 
 const Link: React.FC<LinkProps> = ({

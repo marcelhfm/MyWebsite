@@ -6,13 +6,13 @@ import { Navbar } from "../components/Navbar";
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <div>
+    <body className="bg-base text-yellow-50">
       <Navbar />
       <main>
         <Component {...pageProps} />
       </main>
       <footer></footer>
-    </div>
+    </body>
   );
 }
 
