@@ -8,6 +8,7 @@ module.exports = {
       colors: {
         transparent: "transparent",
         base: "#333333",
+        nav: "#292929",
       },
     },
   },
