@@ -4,7 +4,7 @@ interface PaneProps {}
 
 export const Pane: React.FC<PaneProps> = ({ children }) => {
   return (
-    <div className="bg-violet-300 max-w-2xl flex m-auto mt-10 rounded-lg shadow-md text-gray-900 bg-opacity-50 backdrop-blur bg-clip-border">
+    <div className="bg-opacity-60 bg-violet-300 max-w-2xl flex md:m-auto md:mt-10 md:mb-10 rounded-lg shadow-lg text-gray-900  p-2 mr-2 ml-2 mt-10 mb-10">
       {children}
     </div>
   );
