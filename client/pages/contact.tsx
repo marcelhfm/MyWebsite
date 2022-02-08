@@ -12,7 +12,7 @@ const Contact = () => {
       </div>
       <div>
         <Pane>
-          <div className="w-full">
+          <div className="w-full ">
             <h1 className="text-4xl p-3">Social Media</h1>
             <div className="ml-5 mr-5 mb-5 grid gap-x-5 md:grid-cols-2 sm:grid-cols-1">
               <Pane>
