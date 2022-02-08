@@ -26,7 +26,7 @@ const IndexPage = () => (
         </div>
       </Pane>
     </div>
-    <div>
+    <div className="mt-14">
       <Pane>
         <div className="w-full">
           <h1 className="text-orange-300 text-3xl font-bold p-3">

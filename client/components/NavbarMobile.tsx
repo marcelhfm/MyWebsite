@@ -35,14 +35,14 @@ export const NavbarMobile: React.FC<NavbarMobileProps> = ({}) => {
           leaveFrom="transform opacity-100 scale-100"
           leaveTo="transform opacity-0 scale-95"
         >
-          <Menu.Items className="absolute right-0 w-56 mt-6 mr-2 origin-top-right bg-gray-600 divide-y divide-gray-100 rounded-md shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+          <Menu.Items className="absolute right-0 w-56 mt-6 mr-2 origin-top-right bg-gray-500 divide-y divide-gray-100 rounded-md shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
             <div className="px-1 py-1">
               <Menu.Item>
                 <Link href="/projects/overview">
                   {({ isActive }) => (
                     <div
                       className={`group flex rounded-md items-center w-full px-2 py-2 ${
-                        isActive ? "text-violet-300" : "hover:text-violet-300"
+                        isActive ? "text-orange-300" : "hover:text-orange-300"
                       }`}
                     >
                       Projects
@@ -55,7 +55,7 @@ export const NavbarMobile: React.FC<NavbarMobileProps> = ({}) => {
                   {({ isActive }) => (
                     <div
                       className={`group flex rounded-md items-center w-full px-2 py-2 ${
-                        isActive ? "text-violet-300" : "hover:text-violet-300"
+                        isActive ? "text-orange-300" : "hover:text-orange-300"
                       }`}
                     >
                       Contact
