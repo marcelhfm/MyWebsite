@@ -1,4 +1,5 @@
 import Head from "next/head";
+import { Pane } from "../../components/Pane";
 
 const Overview = () => {
   return (
@@ -8,9 +9,9 @@ const Overview = () => {
           <title>Projects | Overview</title>
         </Head>
       </div>
-      <div>
-        <p>Projects | Overview</p>
-      </div>
+      <Pane>
+        <h1 className="text-4xl p-10">Work in Progress | Coming Soon...</h1>
+      </Pane>
     </div>
   );
 };
