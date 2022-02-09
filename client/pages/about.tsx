@@ -9,7 +9,9 @@ const About = () => {
       </Head>
       <div>
         <Pane>
-          <h1 className="text-4xl p-10">Work in Progress | Coming Soon...</h1>
+          <h1 className="md:text-4xl p-10 sm:text-2xl text-2xl">
+            Work in Progress | Coming Soon...
+          </h1>
         </Pane>
       </div>
     </div>

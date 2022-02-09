@@ -12,11 +12,12 @@ const IndexPage = () => (
           <h1 className="text-4xl text-orange-300 font-bold md:col-span-4">
             Hi I'm Marcel!
           </h1>
-          <img
+          {/* <img
             src="/placeholder.jpg"
             className="md:col-span-1 md:self-center"
-          ></img>
-          <p className="text-lg md:col-span-3">
+          ></img> */}
+          <p className="text-lg md:col-span-4">
+            {/* col-span-3 wenn Img */}
             I'm a Student and Hobbydeveloper living in Munich. I am currently
             full-time studying business informatics at the Hochschule für
             angewandte Wissenschaften München. In my spare time I'm trying to
