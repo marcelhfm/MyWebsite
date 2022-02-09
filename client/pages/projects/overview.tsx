@@ -10,7 +10,11 @@ const Overview = () => {
         </Head>
       </div>
       <Pane>
-        <h1 className="text-4xl p-10">Work in Progress | Coming Soon...</h1>
+        <div>
+          <h1 className="md:text-4xl p-10 sm:text-2xl text-2xl">
+            Work in Progress | Coming Soon...
+          </h1>
+        </div>
       </Pane>
     </div>
   );
