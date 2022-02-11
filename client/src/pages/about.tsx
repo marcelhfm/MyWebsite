@@ -1,7 +1,7 @@
 import Head from "next/head";
 import { Pane } from "../components/Pane";
 
-const About = () => {
+const About = ({ viewCounter }) => {
   return (
     <div>
       <Head>
