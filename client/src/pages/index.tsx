@@ -1,29 +1,23 @@
 import { ViewCount } from "@prisma/client";
 import Head from "next/head";
 import { Pane } from "../components/Pane";
-import prisma from "../lib/prisma";
 import { server } from "../config/url";
+import prisma from "../lib/prisma";
 
-export async function getServerSideProps() {
-  const counter: ViewCount = await prisma.viewCount.findFirst();
-  return {
-    props: {
-      viewCounter: counter,
+export const getServerSideProps = async () => {
+  const viewCount = await prisma.viewCount.findFirst({
+    where: {
+      id: 1,
     },
-  };
-}
-
-async function getCounter() {
-  const counter = await fetch(`${server}/api/counter`, {
-    method: "POST",
   });
-  return counter;
-}
+
+  return { props: { viewCount } };
+};
 
 async function updateCounter(counter) {
   const response = await fetch(`${server}/api/counter`, {
     method: "POST",
-    body: JSON.stringify(counter),
+    body: counter,
   });
 
   if (!response.ok) {
@@ -33,19 +27,10 @@ async function updateCounter(counter) {
   return await response.json();
 }
 
-async function changeCounter(counter) {
-  try {
-    await updateCounter({ counter: counter + 1 });
-  } catch (err) {
-    console.log(err);
-  }
-}
-
-const IndexPage = ({ viewCounter }) => {
-  console.log("Im alive");
-  const currentCounter = getCounter();
-  console.log(currentCounter);
-  changeCounter(currentCounter);
+const IndexPage = ({ viewCount }) => {
+  let counter = viewCount.counter;
+  let updatedCounter = counter + 1;
+  updateCounter(parseInt(updatedCounter));
 
   return (
     <div>
@@ -164,7 +149,7 @@ const IndexPage = ({ viewCounter }) => {
       </div>
       <div>
         <Pane>
-          <div>This page has been viewed {viewCounter.counter} times.</div>
+          <div>This page has been {viewCount.counter} viewed times.</div>
         </Pane>
       </div>
     </div>
