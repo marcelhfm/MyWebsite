@@ -1,4 +1,3 @@
-import { ViewCount } from "@prisma/client";
 import Head from "next/head";
 import { Pane } from "../components/Pane";
 import { server } from "../config/url";
@@ -149,7 +148,13 @@ const IndexPage = ({ viewCount }) => {
       </div>
       <div>
         <Pane>
-          <div>This page has been {viewCount.counter} viewed times.</div>
+          <div className="text-center w-full p-2 font-light">
+            This page has been viewed{" "}
+            <span className="font-bold rounded px-2 py-1 bg-orange-300 text-black shadow-lg">
+              {viewCount.counter}
+            </span>{" "}
+            times.
+          </div>
         </Pane>
       </div>
     </div>

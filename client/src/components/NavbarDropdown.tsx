@@ -55,6 +55,19 @@ export const NavbarDropdown: React.FC<NavbarDropdownProps> = ({}) => {
                 </Link>
               </Menu.Item>
               <Menu.Item>
+                <Link href="/projects/comments">
+                  {({ isActive }) => (
+                    <div
+                      className={`group flex rounded-md items-center w-full px-2 py-2 ${
+                        isActive ? "text-orange-300" : "hover:text-orange-300"
+                      }`}
+                    >
+                      Leave a Comment
+                    </div>
+                  )}
+                </Link>
+              </Menu.Item>
+              <Menu.Item>
                 <Link href="">
                   {({ isActive }) => (
                     <div
