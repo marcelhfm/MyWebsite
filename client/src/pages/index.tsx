@@ -38,8 +38,8 @@ const IndexPage = ({ viewCount }) => {
       </Head>
       <div>
         <Pane>
-          <div className="p-4 grid gap-4 md:grid-cols-4">
-            <h1 className="text-4xl text-orange-300 font-bold md:col-span-4">
+          <div className="grid gap-4 p-4 md:grid-cols-4">
+            <h1 className="text-4xl font-bold text-orange-300 md:col-span-4">
               Hi I'm Marcel!
             </h1>
             {/* <img
@@ -60,13 +60,13 @@ const IndexPage = ({ viewCount }) => {
       <div className="mt-14">
         <Pane>
           <div className="w-full">
-            <h1 className="text-orange-300 text-3xl font-bold p-3">
+            <h1 className="p-3 text-3xl font-bold text-orange-300">
               curriculum vitae
             </h1>
-            <h3 className="text-orange-200 text-xl font-bold px-3">
+            <h3 className="px-3 text-xl font-bold text-orange-200">
               Education
             </h3>
-            <div className="p-3 w-full grid gap-x-10 grid-cols-4">
+            <div className="grid w-full grid-cols-4 gap-x-10 p-3">
               <p className="col-span-1 text-right">
                 <em>Period</em>
               </p>
@@ -79,8 +79,8 @@ const IndexPage = ({ viewCount }) => {
                 <em>Final Grade</em>
               </p>
               <p className="col-span-3">1.8</p>
-              <hr className="mt-1 border-black/20 col-span-4" />
-              <p className="col-span-1 text-right mt-2">
+              <hr className="col-span-4 mt-1 border-black/20" />
+              <p className="col-span-1 mt-2 text-right">
                 <em>Period</em>
               </p>
               <p className="col-span-3 mt-2">10/2020 - 10/2024</p>
@@ -95,10 +95,10 @@ const IndexPage = ({ viewCount }) => {
               </p>
               <p className="col-span-3">Business informatics</p>
             </div>
-            <h3 className="text-orange-200 text-xl font-bold px-3">
+            <h3 className="px-3 text-xl font-bold text-orange-200">
               Work Experience
             </h3>
-            <div className="p-3 w-full grid gap-x-10 grid-cols-4">
+            <div className="grid w-full grid-cols-4 gap-x-10 p-3">
               <p className="col-span-1 text-right">
                 <em>Period</em>
               </p>
@@ -114,8 +114,8 @@ const IndexPage = ({ viewCount }) => {
                 Fraunhofer-Institut für Angewandte und Integrierte Sicherheit
                 AISEC
               </p>
-              <hr className="mt-1 border-black/20 col-span-4" />
-              <p className="col-span-1 text-right mt-2">
+              <hr className="col-span-4 mt-1 border-black/20" />
+              <p className="col-span-1 mt-2 text-right">
                 <em>Period</em>
               </p>
               <p className="col-span-3 mt-2">01/10/2020 - 01/10/2021</p>
@@ -127,8 +127,8 @@ const IndexPage = ({ viewCount }) => {
                 <em>Company</em>
               </p>
               <p className="col-span-3">Lidl Vertriebs- GmbH & Co. KG</p>
-              <hr className="mt-1 border-black/20 col-span-4" />
-              <p className="col-span-1 text-right mt-2">
+              <hr className="col-span-4 mt-1 border-black/20" />
+              <p className="col-span-1 mt-2 text-right">
                 <em>Period</em>
               </p>
               <p className="col-span-3 mt-2">17/09/2021 - 17/09/2022</p>
@@ -148,9 +148,9 @@ const IndexPage = ({ viewCount }) => {
       </div>
       <div>
         <Pane>
-          <div className="text-center w-full p-2 font-light">
+          <div className="w-full p-2 text-center font-light">
             This page has been viewed{" "}
-            <span className="font-bold rounded px-2 py-1 bg-orange-300 text-black shadow-lg">
+            <span className="rounded bg-orange-300 px-2 py-1 font-bold text-black shadow-lg">
               {viewCount.counter}
             </span>{" "}
             times.

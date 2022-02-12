@@ -4,7 +4,7 @@ interface FooterProps {}
 
 export const Footer: React.FC<FooterProps> = ({}) => {
   return (
-    <div className="flex text-sm m-auto font-light text-gray-400 justify-center mb-6 mt-5">
+    <div className="m-auto mb-6 mt-5 flex justify-center text-sm font-light text-gray-400">
       © 2022 Marcel Hofmann. All rights reserved.
     </div>
   );

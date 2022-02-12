@@ -7,19 +7,19 @@ interface NavbarProps {}
 
 export const Navbar: React.FC<NavbarProps> = ({}) => {
   return (
-    <div className="bg-clip-border sticky top-0 z-50 shadow-md w-full bg-opacity-80 blur-backdrop-filter bg-nav">
-      <nav className="shadow-md w-full">
-        <div className="max-w-4xl mx-auto flex justify-between">
+    <div className="blur-backdrop-filter sticky top-0 z-50 w-full bg-nav bg-opacity-80 bg-clip-border shadow-md">
+      <nav className="w-full shadow-md">
+        <div className="mx-auto flex max-w-4xl justify-between">
           {/* Logo */}
 
           <div className="">
             <Link href="/">
               {({ isActive }) => (
                 <div className="flex items-center py-2 px-4">
-                  <div className="flex items-center rounded-xl hover:bg-gray-600 px-1 py-1 duration-300">
+                  <div className="flex items-center rounded-xl px-1 py-1 duration-300 hover:bg-gray-600">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
-                      className={`h-10 w-10 mr-3 duration-300 ${
+                      className={`mr-3 h-10 w-10 duration-300 ${
                         isActive ? "text-orange-300" : "text-white"
                       } `}
                       fill="none"
@@ -29,7 +29,7 @@ export const Navbar: React.FC<NavbarProps> = ({}) => {
                       <path d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
                     </svg>
                     <span
-                      className={`font-bold text-2xl pr-1 duration-300 ${
+                      className={`pr-1 text-2xl font-bold duration-300 ${
                         isActive ? "text-orange-300" : "text-white"
                       }`}
                     >
@@ -42,7 +42,7 @@ export const Navbar: React.FC<NavbarProps> = ({}) => {
           </div>
 
           {/* Rest */}
-          <div className="hidden md:flex items-center">
+          <div className="hidden items-center md:flex">
             {/* Projects dropdown */}
             <NavbarDropdown />
 
@@ -51,7 +51,7 @@ export const Navbar: React.FC<NavbarProps> = ({}) => {
               <Link href="/contact">
                 {({ isActive }) => (
                   <div
-                    className={`rounded-xl hover:bg-gray-600 px-1 py-1 duration-300 ${
+                    className={`rounded-xl px-1 py-1 duration-300 hover:bg-gray-600 ${
                       isActive ? "text-orange-300" : "text-white"
                     }`}
                   >
@@ -66,7 +66,7 @@ export const Navbar: React.FC<NavbarProps> = ({}) => {
               <Link href="/about">
                 {({ isActive }) => (
                   <div
-                    className={`rounded-xl hover:bg-gray-600 px-1 py-1 duration-300 ${
+                    className={`rounded-xl px-1 py-1 duration-300 hover:bg-gray-600 ${
                       isActive ? "text-orange-300" : "text-white"
                     }`}
                   >
@@ -76,7 +76,7 @@ export const Navbar: React.FC<NavbarProps> = ({}) => {
               </Link>
             </div>
           </div>
-          <div className="md:hidden flex items-center">
+          <div className="flex items-center md:hidden">
             <NavbarMobile />
           </div>
         </div>

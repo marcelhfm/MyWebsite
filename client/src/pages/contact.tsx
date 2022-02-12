@@ -13,14 +13,14 @@ const Contact = () => {
       <div>
         <Pane>
           <div className="w-full ">
-            <h1 className="text-4xl p-3">Social Media</h1>
-            <div className="ml-5 mr-5 mb-5 grid gap-x-5 md:grid-cols-2 sm:grid-cols-1">
+            <h1 className="p-3 text-4xl">Social Media</h1>
+            <div className="ml-5 mr-5 mb-5 grid gap-x-5 sm:grid-cols-1 md:grid-cols-2">
               <Pane>
                 <a
                   href="https://www.linkedin.com/in/marcel-hofmann-742555221/"
                   target="_blank"
                 >
-                  <div className="p-3 grid gap-x-3 grid-cols-3">
+                  <div className="grid grid-cols-3 gap-x-3 p-3">
                     <div className="col-span-1 row-span-2">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -58,7 +58,7 @@ const Contact = () => {
               </Pane>
               <Pane>
                 <a href="https://github.com/marcelhfm" target="_blank">
-                  <div className="p-3 grid gap-x-3 grid-cols-3">
+                  <div className="grid grid-cols-3 gap-x-3 p-3">
                     <div className="col-span-1 row-span-2">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -78,7 +78,7 @@ const Contact = () => {
               </Pane>
               <Pane>
                 <a href="https://twitter.com/MarcelHofm" target="_blank">
-                  <div className="p-3 grid gap-x-3 grid-cols-3">
+                  <div className="grid grid-cols-3 gap-x-3 p-3">
                     <div className="col-span-1 row-span-2">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -103,7 +103,7 @@ const Contact = () => {
               </Pane>
               <Pane>
                 <a href="mailto:marcel.hofmann@hofmania.de" target="_blank">
-                  <div className="p-3 grid gap-x-3 grid-cols-3">
+                  <div className="grid grid-cols-3 gap-x-3 p-3">
                     <div className="col-span-1 row-span-2">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"

@@ -7,7 +7,7 @@ import { Footer } from "../components/Footer";
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <div className="flex flex-col h-screen bg-base text-yellow-50">
+    <div className="flex h-screen flex-col bg-base text-yellow-50">
       <Navbar />
       <main className="mb-auto bg-base text-yellow-50">
         <Component {...pageProps} />

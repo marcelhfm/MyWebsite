@@ -8,7 +8,7 @@ export const NavbarMobile: React.FC<NavbarMobileProps> = ({}) => {
     <div className="text-right">
       <Menu as="div" className="relative inline-block text-left">
         <div>
-          <Menu.Button className="inline-flex justify-center w-full rounded-lg hover:bg-gray-600 px-1 py-1">
+          <Menu.Button className="inline-flex w-full justify-center rounded-lg px-1 py-1 hover:bg-gray-600">
             <div className="flex items-center px-2">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -30,13 +30,13 @@ export const NavbarMobile: React.FC<NavbarMobileProps> = ({}) => {
           leaveFrom="transform opacity-100 scale-100"
           leaveTo="transform opacity-0 scale-95"
         >
-          <Menu.Items className="absolute right-0 w-56 mt-6 mr-2 origin-top-right bg-gray-500 divide-y divide-gray-100 rounded-md shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+          <Menu.Items className="absolute right-0 mt-6 mr-2 w-56 origin-top-right divide-y divide-gray-100 rounded-md bg-gray-500 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
             <div className="px-1 py-1">
               <Menu.Item>
                 <Link href="/projects/overview">
                   {({ isActive }) => (
                     <div
-                      className={`group flex rounded-md items-center w-full px-2 py-2 ${
+                      className={`group flex w-full items-center rounded-md px-2 py-2 ${
                         isActive ? "text-orange-300" : "hover:text-orange-300"
                       }`}
                     >
@@ -49,7 +49,7 @@ export const NavbarMobile: React.FC<NavbarMobileProps> = ({}) => {
                 <Link href="/contact">
                   {({ isActive }) => (
                     <div
-                      className={`group flex rounded-md items-center w-full px-2 py-2 ${
+                      className={`group flex w-full items-center rounded-md px-2 py-2 ${
                         isActive ? "text-orange-300" : "hover:text-orange-300"
                       }`}
                     >
@@ -62,8 +62,8 @@ export const NavbarMobile: React.FC<NavbarMobileProps> = ({}) => {
                 <Link href="/about">
                   {({ isActive }) => (
                     <div
-                      className={`group flex rounded-md items-center w-full px-2 py-2 ${
-                        isActive ? "text-violet-300" : "hover:text-violet-300"
+                      className={`group flex w-full items-center rounded-md px-2 py-2 ${
+                        isActive ? "text-orange-300" : "hover:text-orange-300"
                       }`}
                     >
                       About

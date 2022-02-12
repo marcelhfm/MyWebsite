@@ -10,13 +10,13 @@ export const NavbarDropdown: React.FC<NavbarDropdownProps> = ({}) => {
       <Menu as="div" className="relative inline-block text-left">
         <div>
           <Menu.Button
-            className={`inline-flex justify-center w-full rounded-lg hover:bg-gray-600 px-1 py-1`}
+            className={`inline-flex w-full justify-center rounded-lg px-1 py-1 hover:bg-gray-600`}
           >
             <div className="flex items-center">
               Projects
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="h-4 w-4 ml-2"
+                className="ml-2 h-4 w-4"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -34,13 +34,13 @@ export const NavbarDropdown: React.FC<NavbarDropdownProps> = ({}) => {
           leaveFrom="transform opacity-100 scale-100"
           leaveTo="transform opacity-0 scale-95"
         >
-          <Menu.Items className="absolute right-0 w-56 mt-6 origin-top-right bg-gray-500 divide-y divide-gray-100 rounded-md shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+          <Menu.Items className="absolute right-0 mt-6 w-56 origin-top-right divide-y divide-gray-100 rounded-md bg-gray-500 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
             <div className="px-1 py-1">
               <Menu.Item>
                 <Link href="/projects/overview">
                   {({ isActive }) => (
                     <div
-                      className={`group flex rounded-md items-center w-full px-2 py-2 ${
+                      className={`group flex w-full items-center rounded-md px-2 py-2 ${
                         isActive ? "text-orange-300" : "hover:text-orange-300"
                       }`}
                     >
@@ -53,7 +53,7 @@ export const NavbarDropdown: React.FC<NavbarDropdownProps> = ({}) => {
                 <Link href="/projects/comments">
                   {({ isActive }) => (
                     <div
-                      className={`group flex rounded-md items-center w-full px-2 py-2 ${
+                      className={`group flex w-full items-center rounded-md px-2 py-2 ${
                         isActive ? "text-orange-300" : "hover:text-orange-300"
                       }`}
                     >
@@ -66,7 +66,7 @@ export const NavbarDropdown: React.FC<NavbarDropdownProps> = ({}) => {
                 <Link href="">
                   {({ isActive }) => (
                     <div
-                      className={`group flex rounded-md items-center w-full px-2 py-2 ${
+                      className={`group flex w-full items-center rounded-md px-2 py-2 ${
                         isActive ? "text-orange-300" : "hover:text-orange-300"
                       }`}
                     >

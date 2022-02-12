@@ -13,7 +13,7 @@ const About = ({ viewCounter }) => {
             <h1 className="p-2 text-3xl font-bold text-orange-300">
               Technologies
             </h1>
-            <ul className="md:ml-10 ml-3 p-2 text-lg list-disc">
+            <ul className="ml-3 list-disc p-2 text-lg md:ml-10">
               <li>Typescript</li>
               <li>NextJS (React Framework)</li>
               <li>TailwindCSS (Styling Framework</li>
@@ -24,7 +24,7 @@ const About = ({ viewCounter }) => {
             <h2 className="p-2 text-3xl font-bold text-orange-300">
               Deployment
             </h2>
-            <ul className="md:ml-10 ml-3 p-2 text-lg list-disc mb-3">
+            <ul className="ml-3 mb-3 list-disc p-2 text-lg md:ml-10">
               <li>
                 <em className="font-semibold text-orange-200">Fun fact:</em>{" "}
                 This Website didn't cost me anything to deploy!
@@ -46,7 +46,7 @@ const About = ({ viewCounter }) => {
             <h1 className="p-2 text-3xl font-bold text-orange-300">
               Changelog
             </h1>
-            <ul className="md:ml-10 ml-3 p-2 text-md list-disc mb-3">
+            <ul className="text-md ml-3 mb-3 list-disc p-2 md:ml-10">
               <li>12.02.2022 | About site MVP</li>
               <li>
                 12.02.2022 | Serverless functions added & addeed ViewCounter on

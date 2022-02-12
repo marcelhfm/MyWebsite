@@ -12,18 +12,18 @@ const Overview = () => {
       </div>
       <Pane>
         <div className="w-full">
-          <h1 className="text-3xl p-2">All projects</h1>
-          <h2 className="text-lg p-2">
+          <h1 className="p-2 text-3xl">All projects</h1>
+          <h2 className="p-2 text-lg">
             For now, all my projects are embedded into this website. I have
             planned to launch some projects on another website, in order to try
             out other technologies. But this is still in planning.{" "}
           </h2>
-          <ul className="md:mx-5 mx-3 p-2 ">
-            <li className="shadow-lg bg-orange-100 text-gray-900 rounded-lg hover:bg-orange-200">
+          <ul className="mx-3 p-2 md:mx-5 ">
+            <li className="rounded-lg bg-orange-100 text-gray-900 shadow-lg hover:bg-orange-200">
               <Link href="/projects/comments">
                 {({ isActive }) => (
                   <div>
-                    <div className="pt-2 px-2 text-lg font-semibold">
+                    <div className="px-2 pt-2 text-lg font-semibold">
                       Comment Section
                     </div>
                     <p className="px-2">
@@ -38,9 +38,9 @@ const Overview = () => {
                 )}
               </Link>
             </li>
-            <li className="shadow-lg bg-orange-100 text-gray-900 rounded-lg mt-5 mb-5">
+            <li className="mt-5 mb-5 rounded-lg bg-orange-100 text-gray-900 shadow-lg">
               <div>
-                <div className="pt-2 px-2 text-lg font-semibold">
+                <div className="px-2 pt-2 text-lg font-semibold">
                   More Coming Soon!
                 </div>
                 <p className="px-2">
