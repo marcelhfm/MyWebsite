@@ -1,10 +1,10 @@
-import { Prisma } from "@prisma/client";
 import Head from "next/head";
 import { useState } from "react";
-import { server } from "../../config/url";
 import prisma from "../../lib/prisma";
 import safeJsonStringify from "safe-json-stringify";
 import CommentCard from "../../components/CommentCard";
+import { AddComment } from "../../components/AddComment";
+import { Comment } from "@prisma/client";
 
 export async function getServerSideProps() {
   const rawComments = await prisma.comment.findMany();
@@ -18,20 +18,9 @@ export async function getServerSideProps() {
   };
 }
 
-async function saveComment(comment: Prisma.CommentCreateInput) {
-  const response = await fetch(`${server}/api/comment`, {
-    method: "POST",
-    body: JSON.stringify(comment),
-  });
-
-  if (!response.ok) {
-    throw new Error(response.statusText);
-  }
-  return await response.json();
-}
-
 const Comments = ({ initialComments }) => {
-  const [comments, setComments] = useState<[]>(initialComments);
+  const [comments, setComments] = useState<Comment[]>(initialComments);
+  console.log("COMMENTS", comments);
   return (
     <div>
       <div>
@@ -47,13 +36,15 @@ const Comments = ({ initialComments }) => {
         </div>
 
         <div className="border-orange-gray-200 mx-5 h-full rounded-md border bg-orange-50 text-black shadow-lg">
-          {comments.map((c, i: number) => (
-            <div key={i}>
-              <CommentCard comment={c} />
-            </div>
-          ))}
+          <div>
+            {comments.map((c, i: number) => (
+              <div key={i}>
+                <CommentCard comment={c} />
+              </div>
+            ))}
+          </div>
+          <AddComment comments={comments} setComments={setComments} />
         </div>
-        <div className="mx-5 ">Add Comment</div>
       </div>
     </div>
   );

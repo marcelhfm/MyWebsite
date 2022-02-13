@@ -9,7 +9,6 @@ interface CommentCardProps {
 
 export default function CommentCard(props: CommentCardProps) {
   const date: Date = new Date(props.comment.createdAt);
-  console.log(date);
   const formattedDate = moment.default(date).format("MMM Do");
   const formattedHour = moment.default(date).format("HH:mm");
   return (
@@ -23,7 +22,7 @@ export default function CommentCard(props: CommentCardProps) {
             <span className="px-1 text-gray-400">·</span>
             <span className=" text-gray-400">{formattedDate}</span>
             <span className="px-1 text-gray-400">·</span>
-            <span className="px-1 text-gray-400">{formattedHour}</span>
+            <span className="text-gray-400">{formattedHour}</span>
           </span>
         </p>
 
