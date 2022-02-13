@@ -47,6 +47,7 @@ const About = ({ viewCounter }) => {
               Changelog
             </h1>
             <ul className="text-md ml-3 mb-3 list-disc p-2 md:ml-10">
+              <li>13.02.2022 | Comment Feature MVP</li>
               <li>12.02.2022 | About site MVP</li>
               <li>
                 12.02.2022 | Serverless functions added & addeed ViewCounter on
