@@ -16,7 +16,7 @@ const About = ({ viewCounter }) => {
             <ul className="ml-3 list-disc p-2 text-lg md:ml-10">
               <li>Typescript</li>
               <li>NextJS (React Framework)</li>
-              <li>TailwindCSS (Styling Framework</li>
+              <li>TailwindCSS (Styling Framework)</li>
               <li>Prisma (ORM)</li>
               <li>Postgresql (Database)</li>
             </ul>
