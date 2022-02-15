@@ -1,7 +1,7 @@
 import { Prisma } from "@prisma/client";
 import { NextApiRequest, NextApiResponse } from "next";
 import prisma from "../../lib/prisma";
-import transporter from "../../lib/transporter";
+import send from "../../lib/transporter";
 
 export default async (req: NextApiRequest, res: NextApiResponse) => {
   console.log("COMMENT REQUEST METHOD:", req.method);
@@ -21,12 +21,7 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
       subject: `marcel.hofmania.de | New Comment by ${savedComment.author}`,
       text: `${savedComment.author} has left a new Comment: ${savedComment.content}`,
     };
-    try {
-      transporter.verify();
-      transporter.sendMail(mail);
-    } catch (err) {
-      console.log("MAIL ERR:", err);
-    }
+    send(mail);
     res.status(200).json(savedComment);
   } catch (err) {
     console.log("ERR:", err);
