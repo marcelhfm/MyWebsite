@@ -4,7 +4,8 @@ import prisma from "../../lib/prisma";
 import transporter from "../../lib/transporter";
 
 export default async (req: NextApiRequest, res: NextApiResponse) => {
-  console.log("COMMENT REQUEST", req);
+  console.log("COMMENT REQUEST METHOD:", req.method);
+  console.log("COMMENT REQUEST BODY:", req.body);
 
   if (req.method !== "POST") {
     return res.status(405).json({ message: "Method not allowed" });
@@ -13,8 +14,6 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
   try {
     const comment: Prisma.CommentCreateInput = JSON.parse(req.body);
     const savedComment = await prisma.comment.create({ data: comment });
-    res.status(200).json(savedComment);
-
     //Send Email
     const mail = {
       from: "mmailer@hofmania.de",
@@ -24,8 +23,9 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
     };
     transporter.validate();
     transporter.sendMail(mail);
-    console.log("COMMENT RESPONSE");
+    res.status(200).json(savedComment);
   } catch (err) {
+    console.log("ERR:", err);
     res.status(400).json({ message: "Something went wrong" });
   }
 };
