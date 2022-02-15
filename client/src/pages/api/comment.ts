@@ -21,8 +21,12 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
       subject: `marcel.hofmania.de | New Comment by ${savedComment.author}`,
       text: `${savedComment.author} has left a new Comment: ${savedComment.content}`,
     };
-    transporter.validate();
-    transporter.sendMail(mail);
+    try {
+      transporter.verify();
+      transporter.sendMail(mail);
+    } catch (err) {
+      console.log("MAIL ERR:", err);
+    }
     res.status(200).json(savedComment);
   } catch (err) {
     console.log("ERR:", err);
