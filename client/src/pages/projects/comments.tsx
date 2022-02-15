@@ -20,7 +20,6 @@ export async function getServerSideProps() {
 
 const Comments = ({ initialComments }) => {
   const [comments, setComments] = useState<Comment[]>(initialComments);
-  console.log("COMMENTS", comments);
   return (
     <div>
       <div>
