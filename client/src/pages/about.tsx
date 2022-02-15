@@ -47,6 +47,10 @@ const About = ({ viewCounter }) => {
               Changelog
             </h1>
             <ul className="text-md ml-3 mb-3 list-disc p-2 md:ml-10">
+              <li>
+                15.02.2022 | An email is beeing send to my Account after
+                submitting a Comment
+              </li>
               <li>13.02.2022 | Comment Feature MVP</li>
               <li>12.02.2022 | About site MVP</li>
               <li>
